@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 
 class Server {
     constructor(){
@@ -12,7 +13,11 @@ class Server {
         this.routes();
     }
 
-    middlewares(){
+    middlewares(){ //(.use)
+
+        //CORS definir las páginas que pueden tener acceso a la API
+        this.app.use(cors());
+
         //directorio público
         this.app.use( express.static('public') );
     }
@@ -33,7 +38,7 @@ class Server {
 
           //Post para crear datos
           this.app.post('/api', (req, res) => {
-            res.json({
+            res.status(201).json({
                 msg: 'post API'
             });
           });
