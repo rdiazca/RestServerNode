@@ -17,7 +17,7 @@ router.get('/', usuariosGet);
   router.put('/:id', usuariosPut);
 
   //Delete para eliminar datos
-  router.delete('/', usuariosDelete);
+  router.delete('/:id', usuariosDelete);
 
 
 
