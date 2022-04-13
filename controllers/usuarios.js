@@ -6,7 +6,7 @@ const usuariosGet = (req, res = response) => {
     });
   }
 
-  const usuariosPost = (req, res = responde) => {
+  const usuariosPost = (req, res = response) => {
     
     const {nombre, edad} = req.body;
 
@@ -20,14 +20,16 @@ const usuariosGet = (req, res = response) => {
     });
   }
   
-  const usuariosPut = (req, res = responde) => {
+  const usuariosPut = (req, res = response) => {
+    const id = req.params.id;
       res.json({
-        msg: 'put API - controlador'
+        msg: 'put API - controlador',
+        id,
       });
   }
 
 
-const usuariosDelete = (req, res = responde) => {
+const usuariosDelete = (req, res = response) => {
     res.json({
       msg: 'delete API - controlador'
     });

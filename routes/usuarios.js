@@ -14,7 +14,7 @@ router.get('/', usuariosGet);
   router.post('/', usuariosPost);
 
   //Put para actualizar datos
-  router.put('/', usuariosPut);
+  router.put('/:id', usuariosPut);
 
   //Delete para eliminar datos
   router.delete('/', usuariosDelete);
