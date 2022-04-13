@@ -16,8 +16,12 @@ class Server {
 
     middlewares(){ //(.use)
 
+
         //CORS definir las páginas que pueden tener acceso a la API
         this.app.use(cors());
+
+        //Lectura y parseo del body
+        this.app.use( express.json() );
 
         //directorio público
         this.app.use( express.static('public') );
